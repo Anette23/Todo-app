@@ -28,3 +28,20 @@ img {
     /* FONT FAMILY */
     --font-family: "Josefin Sans", sans-serif;
   }
+
+  /* LIGHT THEME */
+:root[data-theme="light"] {
+    --body-bg: hsl(236, 33%, 92%);
+    --header-bg: url("./images/bg-mobile-light.jpg");
+    --header-bg-desktop: url("./images/bg-desktop-light.jpg");
+    --heading-color: hsl(0, 0%, 98%);
+    --input-bg: hsl(0, 0%, 98%);
+    --input-color: hsl(234, 39%, 85%);
+    --task-color: hsl(235, 19%, 35%);
+    --complete-task-color: hsl(236, 9%, 61%);
+    --border-bottom-color: hsl(233, 11%, 84%);
+    --checkbutton-border: hsl(233, 11%, 84%);
+    --remove-task-hover: hsl(235, 19%, 35%);
+    --filter-task-hover: hsl(235, 19%, 35%);
+    --drag-text-color: hsl(236, 9%, 61%);
+  }
