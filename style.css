@@ -294,3 +294,24 @@ input[type="checkbox"] {
     border-radius: 5px;
     padding: 1.5rem;
   }
+
+  .filters button {
+    margin-left: 1rem;
+    background-color: transparent;
+    color: var(--stats-color);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    outline: none;
+    font-family: inherit;
+  }
+  
+  .filters button:hover {
+    color: var(--filter-task-hover);
+  }
+  
+  .filters button.active {
+    color: var(--bright-blue);
+  }
