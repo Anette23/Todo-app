@@ -13,3 +13,18 @@ img {
     height: auto;
     display: block;
 }
+
+/* GENERAL ROOT */
+:root {
+    /* COLORS */
+    --bright-blue: hsl(220, 98%, 61%);
+    --linear-gradient: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    --checkbox-color: hsl(0, 0%, 98%);
+    --stats-color: hsl(234, 11%, 52%);
+  
+    /* TRANSITION */
+    --transition: all 0.2s ease-in-out;
+  
+    /* FONT FAMILY */
+    --font-family: "Josefin Sans", sans-serif;
+  }
