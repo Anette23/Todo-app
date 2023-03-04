@@ -260,3 +260,20 @@ input[type="checkbox"] {
   .remove-task:active svg {
     transform: scale(0.8);
   }
+
+  /* STATS */
+.stats-place {
+    background-color: var(--input-bg);
+    color: var(--stats-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border-radius: 0 0 5px 5px;
+    padding: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  
