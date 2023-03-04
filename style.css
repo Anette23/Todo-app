@@ -83,3 +83,26 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .header-top h1 {
+    color: var(--heading-color);
+    letter-spacing: 8px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  /* BUTTON TO CHANGE THE THEME */
+.themeSwitcher {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    outline: none;
+  }
