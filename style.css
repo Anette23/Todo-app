@@ -315,3 +315,13 @@ input[type="checkbox"] {
   .filters button.active {
     color: var(--bright-blue);
   }
+
+  /* DRAG */
+.drag {
+    display: grid;
+    place-items: center;
+    margin-top: 4rem;
+    color: var(--drag-text-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
