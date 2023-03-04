@@ -127,3 +127,15 @@ body {
     border-radius: 5px;
   }
   
+  .form-button {
+    appearance: none;
+    background-color: transparent;
+    margin-left: 1rem;
+    width: 1.5rem;
+    height: 1.3rem;
+    border: 1px solid var(--checkbutton-border);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    transition: var(--transition);
+  }
