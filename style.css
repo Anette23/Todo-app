@@ -62,3 +62,10 @@ img {
     --filter-task-hover: hsl(234, 39%, 85%);
     --drag-text-color: var(--border-bottom-color);
   }
+
+  body {
+    font-size: 1.125rem;
+    font-family: var(--font-family);
+    background-color: var(--body-bg);
+    min-height: 100vh;
+  }
