@@ -286,3 +286,11 @@ input[type="checkbox"] {
   .clearCompleted:hover {
     color: var(--filter-task-hover);
   }
+
+  #controls {
+    background-color: var(--input-bg);
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    padding: 1.5rem;
+  }
