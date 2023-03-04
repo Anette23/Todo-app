@@ -139,3 +139,57 @@ body {
     place-content: center;
     transition: var(--transition);
   }
+
+  /* TODOS */
+.todos {
+    margin-top: -70px;
+  }
+  
+  .todos li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    background-color: var(--input-bg);
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid var(--border-bottom-color);
+    cursor: pointer;
+  }
+  
+  .todos li:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .todos li span {
+    font-size: clamp(0.5rem, 3vw, 1rem);
+    font-weight: 700;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--task-color);
+    transition: var(--transition);
+  }
+  
+  .todos li span:focus {
+    background-color: var(--complete-task-color);
+    outline: none;
+  }
+  
+  .todos li.complete span {
+    color: var(--complete-task-color);
+    text-decoration: line-through;
+    opacity: 0.4;
+  }
+  
+  .todos li span[contenteditable]:hover {
+    background-color: var(--border-bottom-color);
+  }
+  
+  .todos li div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
