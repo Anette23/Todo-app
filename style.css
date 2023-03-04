@@ -106,3 +106,24 @@ body {
     border: none;
     outline: none;
   }
+
+  /* FORM */
+.form-input {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    background-color: var(--input-bg);
+    color: var(--input-color);
+    padding: 1rem;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  #todo-form div {
+    background-color: var(--input-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+  }
+  
