@@ -282,3 +282,7 @@ input[type="checkbox"] {
     flex-direction: row-reverse;
     gap: 6px;
   }
+
+  .clearCompleted:hover {
+    color: var(--filter-task-hover);
+  }
