@@ -53,4 +53,6 @@ task.name
         </svg>
     </button> 
 `;
+
+taskElement.innerHTML = taskElementMarkup
 }
