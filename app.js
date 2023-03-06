@@ -40,6 +40,14 @@ form.addEventListener("submit", (e) => {
   form.reset()
 });
 
+todos.addEventListener("keydown", (e) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+  
+      e.target.blur();
+    }
+  });
+
 // CREATE TASK FUNCTION
 function createTask(task) {
     const taskElement = document.createElement('li')
