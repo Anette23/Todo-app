@@ -1,24 +1,25 @@
 // VARIABLES
 
-const form = document.querySelector('#todo-form')
-const formInput = document.querySelector('#form-input')
+const form = document.querySelector("#todo-form");
+const formInput = document.querySelector("#form-input");
 
-let tasks = JSON.parse(localStorage.getItem('tasks')) || []
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    const inputValue = formInput.value
+  const inputValue = formInput.value;
 
-    if(inputValue === '') {
-        return
-    }
+  if (inputValue === "") {
+    return;
+  }
 
-    const task = {
-        name: inputValue,
-        id: new Date().getTime(),
-        isCompleted: false
-    }
+  const task = {
+    name: inputValue,
+    id: new Date().getTime(),
+    isCompleted: false,
+  };
 
-    tasks.push(task)
-})
+  tasks.push(task);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+});
