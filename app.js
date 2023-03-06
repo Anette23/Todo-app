@@ -29,5 +29,5 @@ form.addEventListener("submit", (e) => {
 
 
 function createTask(task) {
-
+    const taskElement = document.createElement('li')
 }
