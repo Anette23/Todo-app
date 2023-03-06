@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
     const task = {
         name: inputValue,
         id: new Date().getTime(),
-        isCompeted: false
+        isCompleted: false
     }
 
 })
