@@ -3,7 +3,7 @@
 const form = document.querySelector('#todo-form')
 const formInput = document.querySelector('#form-input')
 
-let tasks = []
+let tasks = JSON.parse(localStorage.getItem('tasks')) || []
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
