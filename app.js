@@ -25,6 +25,8 @@ form.addEventListener("submit", (e) => {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 
   createTask(task)
+
+  form.reset()
 });
 
 
