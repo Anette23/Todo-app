@@ -32,6 +32,10 @@ function createTask(task) {
     const taskElement = document.createElement('li')
     taskElement.setAttribute('id', task.id)
 
+    if(taskElement.isCompleted) {
+        taskElement.classList.add('complete')
+    }
+
     const taskElementMarkup = `
     <div>
         <input type="checkbox" name="task-name" id="${task.id}" 
