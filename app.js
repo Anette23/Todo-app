@@ -10,5 +10,8 @@ form.addEventListener('submit', (e) => {
 
     const inputValue = formInput.value
 
+    if(inputValue === '') {
+        return
+    }
 
 })
