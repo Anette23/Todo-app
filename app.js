@@ -1,8 +1,8 @@
 // VARIABLES
-
 const form = document.querySelector("#todo-form");
 const formInput = document.querySelector("#form-input");
 const todos = document.querySelector('.todos')
+const remainingTasks = document.querySelector('.remaining-tasks')
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -40,7 +40,7 @@ form.addEventListener("submit", (e) => {
   form.reset()
 });
 
-
+// CREATE TASK FUNCTION
 function createTask(task) {
     const taskElement = document.createElement('li')
     taskElement.setAttribute('id', task.id)
@@ -52,7 +52,9 @@ function createTask(task) {
     const taskElementMarkup = `
     <div>
         <input type="checkbox" name="task-name" id="${task.id}" 
-        ${task.isCompleted ? "checked" : ""}>
+        ${
+            task.isCompleted ? "checked" : ""
+    }>
         <span ${!task.isCompleted ? "contenteditable" : ""}>${
 task.name
 }</span>
@@ -71,4 +73,11 @@ taskElement.innerHTML = taskElementMarkup
 todos.appendChild(taskElement)
 
 countTasks()
+}
+
+// COUNT TASKS FUNCTION
+function countTasks() {
+const completedTasksArray = tasks.filter((task) => task.isCompleted === true)
+
+remainingTasks.textContent = tasks.length - completedTasksArray.length
 }
