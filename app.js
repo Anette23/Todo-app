@@ -6,6 +6,10 @@ const todos = document.querySelector('.todos')
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
+formInput.addEventListener('focus', () => {
+    formInput.placeholder = "Currently typing"
+})
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
