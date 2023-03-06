@@ -2,6 +2,7 @@
 
 const form = document.querySelector("#todo-form");
 const formInput = document.querySelector("#form-input");
+const todos = document.querySelector('.todos')
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -25,3 +26,8 @@ form.addEventListener("submit", (e) => {
 
   createTask(task)
 });
+
+
+function createTask(task) {
+
+}
