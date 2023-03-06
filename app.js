@@ -20,4 +20,5 @@ form.addEventListener('submit', (e) => {
         isCompleted: false
     }
 
+    tasks.push(task)
 })
