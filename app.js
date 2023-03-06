@@ -55,4 +55,5 @@ task.name
 `;
 
 taskElement.innerHTML = taskElementMarkup
+todos.appendChild(taskElement)
 }
