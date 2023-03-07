@@ -185,3 +185,8 @@ function filterTasks(filterType) {
         createTask(task)
      })
 }
+
+// Attach event listeners to the filter buttons.
+filterAllButton.addEventListener('click', () => filterTasks('all'))
+filterCompletedButton.addEventListener('click', () => filterTasks('completed'))
+filterRemainButton.addEventListener('click', () => filterTasks('remain'))
