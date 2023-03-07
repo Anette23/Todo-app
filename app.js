@@ -89,3 +89,11 @@ const completedTasksArray = tasks.filter((task) => task.isCompleted === true)
 
 remainingTasks.textContent = tasks.length - completedTasksArray.length
 }
+
+todos.addEventListener('click', (e) => {
+    if(e.target.classList.contains('remove-task') || e.target.parentElement.classList.contains('remove-task') || e.target.parentElement.parentElement.classList.contains('remove-task')) {
+    const taskId = e.target.closest('li').id
+
+    removeTask(taskId)
+    }
+})
