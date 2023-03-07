@@ -8,6 +8,7 @@ const filters = document.querySelectorAll(".filters button");
 const filterAllButton = document.getElementById("all");
 const filterCompletedButton = document.getElementById("completed");
 const filterRemainButton = document.getElementById("remain");
+const draggables = document.querySelectorAll(".draggable");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -190,3 +191,6 @@ function filterTasks(filterType) {
 filterAllButton.addEventListener('click', () => filterTasks('all'))
 filterCompletedButton.addEventListener('click', () => filterTasks('completed'))
 filterRemainButton.addEventListener('click', () => filterTasks('remain'))
+
+// Initialize the task list to show all tasks by default.
+filterTasks('all')
