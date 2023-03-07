@@ -39,52 +39,53 @@
   <link rel="stylesheet" href="./style.css">
   <script src="./app.js" defer></script>
 
-  <body>
-  
-    <header class="header">
-      <div class="wrapper">
-        <section class="header-top">
-          <h1>TODO</h1>
-          <button type="button" title="theme" class="themeSwitcher">
-            <img src="./images/icon-sun.svg" class="sunIcon" alt="Theme icon">
-          </button>
-        </section>
+<body>
 
-        <form action="#" id="todo-form">
-          <div>
-            <span class="form-button"></span>
-            <input title="task" type="text" class="form-input" name="task-name" id="form-input" placeholder="Create a new todo...">
-          </div>
-        </form>
-      </div>
-    </header>
+  <header class="header">
+    <div class="wrapper">
+      <section class="header-top">
+        <h1>TODO</h1>
+        <button type="button" title="theme" class="themeSwitcher">
+          <img src="./images/icon-sun.svg" class="sunIcon" alt="Theme icon">
+        </button>
+      </section>
 
-<main>
-  <div class="wrapper">
-    <ul class="todos">
-    </ul>
-
-    <div class="stats-place">
-      <div class="left-items">
-        <span>items left</span>
-        <span class="remaining-tasks"></span>
-      </div>
-      <span class="clearCompleted">Clear completed</span>
+      <form action="#" id="todo-form">
+        <div>
+          <span class="form-button"></span>
+          <input title="task" type="text" class="form-input" name="task-name" id="form-input"
+            placeholder="Create a new todo...">
+        </div>
+      </form>
     </div>
+  </header>
 
-    <div id="controls">
-      <div class="filters">
-        <button type="button" class="active" id="all">All</button>
-        <button type="button" id="remain">Active</button>
+  <main>
+    <div class="wrapper">
+      <ul class="todos">
+      </ul>
+
+      <div class="stats-place">
+        <div class="left-items">
+          <span>items left</span>
+          <span class="remaining-tasks"></span>
+        </div>
+        <span class="clearCompleted">Clear completed</span>
+      </div>
+
+      <div id="controls">
+        <div class="filters">
+          <button type="button" class="active" id="all">All</button>
+          <button type="button" id="remain">Active</button>
           <button type="button" id="completed">Completed</button>
+        </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
 
-<footer class="drag">
-  <p>Drag and drop to reorder list</p>
-</footer>
+  <footer class="drag">
+    <p>Drag and drop to reorder list</p>
+  </footer>
 </body>
 
 </html>

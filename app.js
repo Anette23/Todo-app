@@ -57,10 +57,10 @@ todos.addEventListener("keydown", (e) => {
 // CREATE TASK FUNCTION
 function createTask(task) {
   const taskElement = document.createElement("li");
-  
+
   taskElement.setAttribute("id", task.id);
-  taskElement.setAttribute('draggable', 'true')
-  taskElement.setAttribute('class', 'draggable')
+  taskElement.setAttribute("draggable", "true");
+  taskElement.setAttribute("class", "draggable");
 
   if (task.isCompleted) {
     taskElement.classList.add("complete");
@@ -172,62 +172,61 @@ clear.addEventListener("click", () => {
 
 // FILTER TASKS FUNCTION
 function filterTasks(filterType) {
-    let filteredTasks = []
+  let filteredTasks = [];
 
-    if (filterType == 'all') {
-        filteredTasks = tasks
-    } else if (filterType === 'completed') {
-        filteredTasks = tasks.filter((task) => task.isCompleted)
-    } else if (filterType === 'remain') {
-        filteredTasks = tasks.filter((task) => !task.isCompleted)
-    }
+  if (filterType == "all") {
+    filteredTasks = tasks;
+  } else if (filterType === "completed") {
+    filteredTasks = tasks.filter((task) => task.isCompleted);
+  } else if (filterType === "remain") {
+    filteredTasks = tasks.filter((task) => !task.isCompleted);
+  }
 
-     // Clear the task list before re-populating it with the filtered tasks
-     todos.innerHTML = ''
+  // Clear the task list before re-populating it with the filtered tasks
+  todos.innerHTML = "";
 
-     // Add each task item to the task list
-     filteredTasks.forEach((task) => {
-        createTask(task)
-     })
+  // Add each task item to the task list
+  filteredTasks.forEach((task) => {
+    createTask(task);
+  });
 }
 
 // Attach event listeners to the filter buttons.
-filterAllButton.addEventListener('click', () => filterTasks('all'))
-filterCompletedButton.addEventListener('click', () => filterTasks('completed'))
-filterRemainButton.addEventListener('click', () => filterTasks('remain'))
+filterAllButton.addEventListener("click", () => filterTasks("all"));
+filterCompletedButton.addEventListener("click", () => filterTasks("completed"));
+filterRemainButton.addEventListener("click", () => filterTasks("remain"));
 
 // Initialize the task list to show all tasks by default.
-filterTasks('all')
-
+filterTasks("all");
 
 // DRAG AND DROP
 new Sortable(todos, {
-    animation: 200,
-    easing: "cubic-bezier(1, 0, 0, 1)",
-    preventOnFilter: true,
-    ghostClass: "sortable-ghost",
-})
+  animation: 200,
+  easing: "cubic-bezier(1, 0, 0, 1)",
+  preventOnFilter: true,
+  ghostClass: "sortable-ghost",
+});
 
 // SWITCH THEME FUNCTION
 const switchTheme = () => {
-    // Get root element and data-theme value
-    const rootElement = document.documentElement
-    const themeImg = document.querySelector('.themeSwitcher img')
+  // Get root element and data-theme value
+  const rootElement = document.documentElement;
+  const themeImg = document.querySelector(".themeSwitcher img");
 
-    let dataTheme = rootElement.getAttribute('data-theme')
-    let newTheme = dataTheme === 'light' ? 'dark' : 'light'
+  let dataTheme = rootElement.getAttribute("data-theme");
+  let newTheme = dataTheme === "light" ? "dark" : "light";
 
-    if (newTheme === 'light') {
-        themeImg.src = "./images/icon-moon.svg";
-    } else if (newTheme === 'dark') {
-        themeImg.src = "./images/icon-sun.svg";
-    }
+  if (newTheme === "light") {
+    themeImg.src = "./images/icon-moon.svg";
+  } else if (newTheme === "dark") {
+    themeImg.src = "./images/icon-sun.svg";
+  }
 
-    // SET THE NEW HTML ATTRIBUTE
+  // SET THE NEW HTML ATTRIBUTE
   rootElement.setAttribute("data-theme", newTheme);
 
   localStorage.setItem("theme", newTheme);
-}
+};
 
 // ADD EVENT LISTENER FOR THE THEME SWITCHER
-themeSwitcher.addEventListener('click', switchTheme)
+themeSwitcher.addEventListener("click", switchTheme);
