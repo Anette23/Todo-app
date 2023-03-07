@@ -13,6 +13,19 @@
 
   <title>Frontend Mentor | Todo app</title>
 
+  <script>
+    // CHECK LOCAL STORAGE
+    let localS = localStorage.getItem('theme'),
+      themeToSet = localS
+
+    // IF LOCAL STORAGE IS NOT SET WE CHECK THE OS PREFERENCE
+    if (!localS) {
+      themeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    }
+    // SET THE CORRECT THEME
+    document.documentElement.setAttribute('data-theme', themeToSet)
+  </script>
+
   <!-- GOOGLE FONTS LINK -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
