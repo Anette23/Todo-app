@@ -210,7 +210,6 @@ input[type="checkbox"] {
   }
   
   input[type="checkbox"]:hover {
-    transform: scale(1.1);
     border: 1px solid transparent;
     background: linear-gradient(hsl(0, 0%, 98%), hsl(0, 0%, 98%)) padding-box,
       linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
