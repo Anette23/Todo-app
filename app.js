@@ -1,4 +1,5 @@
 // VARIABLES
+const themeSwitcher = document.querySelector(".themeSwitcher");
 const form = document.querySelector("#todo-form");
 const formInput = document.querySelector("#form-input");
 const todos = document.querySelector(".todos");
@@ -227,3 +228,6 @@ const switchTheme = () => {
 
   localStorage.setItem("theme", newTheme);
 }
+
+// ADD EVENT LISTENER FOR THE THEME SWITCHER
+themeSwitcher.addEventListener('click', switchTheme)
