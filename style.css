@@ -181,8 +181,8 @@ body {
     color: var(--complete-task-color);
     text-decoration: line-through;
     opacity: 0.4;
-  }
-  
+  } 
+   
   .todos li span[contenteditable]:hover {
     background-color: var(--border-bottom-color);
   }
