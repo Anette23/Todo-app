@@ -145,3 +145,13 @@ function updateTask(taskId, el) {
 
   countTasks();
 }
+
+
+// ACTIVE CLASS
+filters.forEach((btn) => {
+btn.addEventListener('click', () => {
+    document.querySelector('button.active').classList.remove('active')
+    btn.classList.add('active')
+})
+})
+
