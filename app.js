@@ -56,7 +56,10 @@ todos.addEventListener("keydown", (e) => {
 // CREATE TASK FUNCTION
 function createTask(task) {
   const taskElement = document.createElement("li");
+  
   taskElement.setAttribute("id", task.id);
+  taskElement.setAttribute('draggable', 'true')
+  taskElement.setAttribute('class', 'draggable')
 
   if (task.isCompleted) {
     taskElement.classList.add("complete");
