@@ -159,5 +159,6 @@ btn.addEventListener('click', () => {
 const clear = document.querySelector('.clearCompleted')
 
 clear.addEventListener('click', () => {
-    
+    // Get all the completed tasks using querySelectorAll method and pass in the CSS selector for completed tasks.
+    const completedTasks = document.querySelectorAll('.todos li.complete')
 })
