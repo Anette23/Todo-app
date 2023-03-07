@@ -206,3 +206,24 @@ new Sortable(todos, {
     preventOnFilter: true,
     ghostClass: "sortable-ghost",
 })
+
+// SWITCH THEME FUNCTION
+const switchTheme = () => {
+    // Get root element and data-theme value
+    const rootElement = document.documentElement
+    const themeImg = document.querySelector('.themeSwitcher img')
+
+    let dataTheme = rootElement.getAttribute('data-theme')
+    let newTheme = dataTheme === 'light' ? 'dark' : 'light'
+
+    if (newTheme === 'light') {
+        themeImg.src = "./images/icon-moon.svg";
+    } else if (newTheme === 'dark') {
+        themeImg.src = "./images/icon-sun.svg";
+    }
+
+    // SET THE NEW HTML ATTRIBUTE
+  rootElement.setAttribute("data-theme", newTheme);
+
+  localStorage.setItem("theme", newTheme);
+}
