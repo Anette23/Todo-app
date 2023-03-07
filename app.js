@@ -157,3 +157,7 @@ btn.addEventListener('click', () => {
 
 // CLEAR ALL COMPLETED TASKS FUNCTION
 const clear = document.querySelector('.clearCompleted')
+
+clear.addEventListener('click', () => {
+    
+})
