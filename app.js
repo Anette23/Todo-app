@@ -197,3 +197,12 @@ filterRemainButton.addEventListener('click', () => filterTasks('remain'))
 
 // Initialize the task list to show all tasks by default.
 filterTasks('all')
+
+
+// DRAG AND DROP
+new Sortable(todos, {
+    animation: 200,
+    easing: "cubic-bezier(1, 0, 0, 1)",
+    preventOnFilter: true,
+    ghostClass: "sortable-ghost",
+})
