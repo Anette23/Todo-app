@@ -57,7 +57,7 @@ function createTask(task) {
   const taskElement = document.createElement("li");
   taskElement.setAttribute("id", task.id);
 
-  if (taskElement.isCompleted) {
+  if (task.isCompleted) {
     taskElement.classList.add("complete");
   }
 
@@ -146,19 +146,42 @@ function updateTask(taskId, el) {
   countTasks();
 }
 
-
 // ACTIVE CLASS
 filters.forEach((btn) => {
-btn.addEventListener('click', () => {
-    document.querySelector('button.active').classList.remove('active')
-    btn.classList.add('active')
-})
-})
+  btn.addEventListener("click", () => {
+    document.querySelector("button.active").classList.remove("active");
+    btn.classList.add("active");
+  });
+});
 
 // CLEAR ALL COMPLETED TASKS FUNCTION
-const clear = document.querySelector('.clearCompleted')
+const clear = document.querySelector(".clearCompleted");
 
-clear.addEventListener('click', () => {
-    // Get all the completed tasks using querySelectorAll method and pass in the CSS selector for completed tasks.
-    const completedTasks = document.querySelectorAll('.todos li.complete')
-})
+clear.addEventListener("click", () => {
+  // Get all the completed tasks using querySelectorAll method and pass in the CSS selector for completed tasks.
+  const completedTasks = document.querySelectorAll(".todos li.complete");
+
+  // Loop through the completed tasks and remove each task from the DOM using the remove method.
+  completedTasks.forEach((task) => task.remove());
+});
+
+// FILTER TASKS FUNCTION
+function filterTasks(filterType) {
+    let filteredTasks = []
+
+    if (filterType == 'all') {
+        filteredTasks = tasks
+    } else if (filterType === 'completed') {
+        filteredTasks = tasks.filter((task) => task.isCompleted)
+    } else if (filterType === 'remain') {
+        filteredTasks = tasks.filter((task) => !task.isCompleted)
+    }
+
+     // Clear the task list before re-populating it with the filtered tasks
+     todos.innerHTML = ''
+
+     // Add each task item to the task list
+     filteredTasks.forEach((task) => {
+        createTask(task)
+     })
+}
