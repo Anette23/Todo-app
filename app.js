@@ -3,6 +3,11 @@ const form = document.querySelector("#todo-form");
 const formInput = document.querySelector("#form-input");
 const todos = document.querySelector(".todos");
 const remainingTasks = document.querySelector(".remaining-tasks");
+const controls = document.getElementById("controls");
+const filters = document.querySelectorAll(".filters button");
+const filterAllButton = document.getElementById("all");
+const filterCompletedButton = document.getElementById("completed");
+const filterRemainButton = document.getElementById("remain");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
