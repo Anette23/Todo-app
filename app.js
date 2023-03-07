@@ -90,6 +90,8 @@ const completedTasksArray = tasks.filter((task) => task.isCompleted === true)
 remainingTasks.textContent = tasks.length - completedTasksArray.length
 }
 
+
+// REMOVE TASK
 todos.addEventListener('click', (e) => {
     if(e.target.classList.contains('remove-task') || e.target.parentElement.classList.contains('remove-task') || e.target.parentElement.parentElement.classList.contains('remove-task')) {
     const taskId = e.target.closest('li').id
@@ -97,3 +99,14 @@ todos.addEventListener('click', (e) => {
     removeTask(taskId)
     }
 })
+
+// REMOVE TASK FUNCTION
+function removeTask(taskId) {
+    tasks = tasks.filter((task) => task.id !== parseInt(taskId))
+
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+
+    document.getElementById(taskId).remove()
+
+    countTasks()
+}
